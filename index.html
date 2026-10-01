@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OWO Planner — planner for tasks, habits, finances, journal and reminders</title>
+<meta name="description" content="OWO Planner is a personal planner app for tasks, habits, finances, a daily journal and reminders. Developed by OWO Studio.">
+<meta property="og:site_name" content="OWO Planner">
+<meta property="og:title" content="OWO Planner">
+<meta property="og:description" content="Personal planner for tasks, habits, finances, journal and reminders.">
+<style>
+  :root{
+    --bg:#FBF6EC; --card:#FFFFFF; --text:#2A1F16; --muted:#7A6A57;
+    --accent:#B8935F; --line:#E9DFCB;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#1C1712; --card:#241E17; --text:#F2E9DA; --muted:#B7A88F; --line:#3A3125; }
+  }
+  *{box-sizing:border-box;}
+  html,body{max-width:100%; overflow-x:hidden;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:40px 20px 80px;}
+  .top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:28px;}
+  h1{font-size:34px; margin:0 0 6px; overflow-wrap:break-word;}
+  .tag{color:var(--muted); font-size:17px; margin:0;}
+  .langBtn{
+    flex:0 0 auto; background:var(--card); border:1px solid var(--line); color:var(--text);
+    border-radius:999px; padding:9px 16px; font-size:14px; font-weight:600; cursor:pointer;
+  }
+  .langBtn:hover{border-color:var(--accent);}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:24px 28px; margin-bottom:20px; overflow:hidden;
+  }
+  h2{font-size:19px; margin:0 0 12px; overflow-wrap:break-word;}
+  p{margin:0 0 12px; overflow-wrap:break-word;}
+  ul{margin:0 0 12px; padding-left:20px;}
+  li{margin-bottom:6px; overflow-wrap:break-word;}
+  a{color:var(--accent); overflow-wrap:break-word;}
+  .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:600; font-size:14px;
+    border:1px solid var(--line); border-radius:999px; padding:9px 16px; color:var(--text); background:var(--bg);
+  }
+  .btn:hover{border-color:var(--accent);}
+  .foot{color:var(--muted); font-size:13px; text-align:center; margin-top:28px;}
+  .lang-block{display:none;}
+  .lang-block.active{display:block;}
+  @media (max-width:640px){
+    .card{padding:18px 16px;}
+    .wrap{padding:28px 14px 60px;}
+    h1{font-size:28px;}
+  }
+</style>
+<noscript><style>.lang-block{display:block !important; margin-bottom:24px;} .langBtn{display:none;}</style></noscript>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div>
+      <h1>OWO Planner</h1>
+      <p class="tag" id="tagline">Personal planner for tasks, habits, finances, journal and reminders</p>
+    </div>
+    <button class="langBtn" id="langToggle" type="button" data-lang="en">Русский</button>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div class="lang-block active" id="lang-en">
+
+    <div class="card">
+      <h2>What is OWO Planner?</h2>
+      <p><b>OWO Planner</b> is a personal planner app that helps you organize your day in one place. The app is developed by <b>OWO Studio</b>.</p>
+      <ul>
+        <li><b>Tasks and calendar</b> — plan tasks and events by date;</li>
+        <li><b>Habits</b> — build and track daily habits;</li>
+        <li><b>Finances</b> — keep a simple record of your income and expenses;</li>
+        <li><b>Journal</b> — notes and a daily self-observation diary;</li>
+        <li><b>Reminders</b> — notifications at the time you choose;</li>
+        <li><b>Photo of the day</b> — keep one photo for each day.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>How the app uses Google Sign-In</h2>
+      <p>You can sign in to OWO Planner with your Google Account. Google Sign-In is used only for two things:</p>
+      <ul>
+        <li>to identify your account by your <b>email address</b>;</li>
+        <li>to sync your planner data between your devices by saving a backup in the app's hidden data folder in your Google Drive (<b>drive.appdata</b> permission). The app cannot see or change any other files in your Drive.</li>
+      </ul>
+      <p>Your data stays in your own Google account. We do not sell it, do not use it for advertising and do not share it with third parties. OWO Planner does not use Google APIs to generate or process images.</p>
+      <p>OWO Planner's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </div>
+
+    <div class="card">
+      <h2>Privacy and contact</h2>
+      <div class="links">
+        <a class="btn" href="https://owo-studio-games.github.io/OWO---Planner---privacy/">Privacy Policy</a>
+        <a class="btn" href="mailto:supportowoplanner@gmail.com">supportowoplanner@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== РУССКИЙ ===================== -->
+  <div class="lang-block" id="lang-ru">
+
+    <div class="card">
+      <h2>Что такое OWO Planner?</h2>
+      <p><b>OWO Planner</b> — личный планировщик, который помогает организовать день в одном месте. Разработчик приложения — <b>OWO Studio</b>.</p>
+      <ul>
+        <li><b>Задачи и календарь</b> — планирование задач и событий по датам;</li>
+        <li><b>Привычки</b> — формирование и отслеживание ежедневных привычек;</li>
+        <li><b>Финансы</b> — простой учёт доходов и расходов;</li>
+        <li><b>Дневник</b> — заметки и дневник самонаблюдения;</li>
+        <li><b>Напоминания</b> — уведомления в выбранное вами время;</li>
+        <li><b>Фото дня</b> — по одному фото на каждый день.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Как приложение использует вход через Google</h2>
+      <p>В OWO Planner можно войти с помощью аккаунта Google. Вход через Google используется только для двух целей:</p>
+      <ul>
+        <li>определить ваш аккаунт по <b>адресу электронной почты</b>;</li>
+        <li>синхронизировать данные планировщика между вашими устройствами: резервная копия хранится в скрытой папке приложения в вашем Google Drive (разрешение <b>drive.appdata</b>). Другие файлы в вашем Drive приложение не видит и не изменяет.</li>
+      </ul>
+      <p>Ваши данные остаются в вашем Google-аккаунте. Мы не продаём их, не используем для рекламы и не передаём третьим лицам. OWO Planner не использует API Google для создания или обработки изображений.</p>
+      <p>Использование OWO Planner и передача информации в приложение из сервисов Google API соответствует <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Политике использования данных пользователей сервисов API Google</a>, включая требования ограниченного использования (Limited Use).</p>
+    </div>
+
+    <div class="card">
+      <h2>Конфиденциальность и контакты</h2>
+      <div class="links">
+        <a class="btn" href="https://owo-studio-games.github.io/OWO---Planner---privacy/">Политика конфиденциальности</a>
+        <a class="btn" href="mailto:supportowoplanner@gmail.com">supportowoplanner@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">© OWO Studio</div>
+</div>
+
+<script>
+  (function(){
+    var STR = {
+      en: { tag: 'Personal planner for tasks, habits, finances, journal and reminders', btn: 'Русский', title: 'OWO Planner — planner for tasks, habits, finances, journal and reminders', html: 'en' },
+      ru: { tag: 'Личный планировщик задач, привычек, финансов, дневника и напоминаний', btn: 'English', title: 'OWO Planner — планировщик задач, привычек, финансов, дневника и напоминаний', html: 'ru' }
+    };
+    var btn = document.getElementById('langToggle');
+    function apply(lang){
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-ru').classList.toggle('active', lang === 'ru');
+      document.getElementById('tagline').textContent = STR[lang].tag;
+      document.documentElement.lang = STR[lang].html;
+      document.title = STR[lang].title;
+      btn.textContent = STR[lang].btn;
+      btn.setAttribute('data-lang', lang);
+    }
+    btn.addEventListener('click', function(){
+      apply(btn.getAttribute('data-lang') === 'en' ? 'ru' : 'en');
+    });
+    var l = (navigator.language || '').toLowerCase();
+    apply(l.indexOf('ru') === 0 ? 'ru' : 'en');
+  })();
+</script>
+
+</body>
+</html>
