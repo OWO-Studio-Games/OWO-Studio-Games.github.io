@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<style>html.owo-pre{background:#FBF4E6}@media (prefers-color-scheme: dark){html.owo-pre{background:#1E1A14}}html.owo-pre body{visibility:hidden}</style>
+<script>document.documentElement.classList.add('owo-pre');setTimeout(function(){document.documentElement.classList.remove('owo-pre')},2000);</script>
+<noscript><style>html.owo-pre body{visibility:visible}</style></noscript>
 <title>OWO Planner: planner for tasks, habits, finances, journal and reminders</title>
 <meta name="description" id="metaDesc" content="OWO Planner is a personal planner app for tasks, habits, finances, a daily journal and reminders. Developed by OWO Studio.">
 <meta property="og:site_name" content="OWO Planner">
@@ -351,6 +356,7 @@
     if (!start){ try{ start = pick(localStorage.getItem('owo_site_lang')); }catch(e){} }
     if (!start){ var nl = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]; for (var i=0;i<nl.length && !start;i++) start = pick(nl[i]); }
     setLang(start || 'en', false);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){root.classList.remove('owo-pre');});});
   })();
 </script>
 
